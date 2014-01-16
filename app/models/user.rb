@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 	include ActiveModel::SecurePassword
 
-	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
 
 	has_secure_password
 	validates_confirmation_of :password, if: lambda { |m| m.password.present? }
@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 	validate :username, presence: true, uniqueness: true, length: { in: 4..24 }
 
 	before_save { 
-		self.email = email.downcase
+		email.downcase!
 	}
 
 end
