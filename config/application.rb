@@ -21,5 +21,7 @@ module ComicRealm
     # config.i18n.default_locale = :de
 
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
+    I18n.enforce_available_locales = true
+    
   end
 end
