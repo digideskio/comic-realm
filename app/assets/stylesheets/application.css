@@ -14,20 +14,22 @@
  *= require_tree .
  */
 
- @font-face {
+@font-face {
 	font-family: 'Glyphicons Halflings';
-	src: url('/assets/fonts/glyphicons-halflings-regular.eot');
-	src: url('/assets/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/assets/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+	src: url('/assets/glyphicons-halflings-regular.eot');
+	src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 
 body {
 	min-height: 2000px;
 	padding-top: 50px;
 }
-
-.login-form {
-
+.navbar-fixed-top .container {
+	width: 100% !important;
+	padding-left: 20px;
+	padding-right: 20px;
 }
+
 .login-form input {
 	border-radius: 5px;
 	border: 1px solid #ccc;

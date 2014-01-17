@@ -19,11 +19,26 @@
 				</button>
 				<a class="navbar-brand" href="#">ComicRealm</a>
 			</div>
+
+			<!-- SEARCH BAR
+			<form class="navbar-form navbar-right" role="search" style="width: 40%;">
+				<div class="input-group">
+					<input type="text" class="form-control">
+					<span class="input-group-btn">
+						<button type="button" class="btn btn-primary">
+							<span class="glyphicon glyphicon-search"></span>
+						</button>
+					</span>
+				</div>
+			</form>
+			-->
+
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 				<% if @logged_in %>
-					<li><a href="/logout">Logout</a></li>
+					<li><a href="/logout">Sign Out</a></li>
 				<% else %>
+					<li><a href="../navbar-static-top/">Sign Up</a></li>
 					<li class="dropdown">
 					<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
 					<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
@@ -34,7 +49,6 @@
 						<% end %>
 					</div>
 					</li>
-					<li><a href="../navbar-static-top/">Sign Up</a></li>
 				<% end %>
 				</ul>
 			</div>
@@ -42,7 +56,7 @@
 	</div>
 
 	<%= yield %>
-
+<span class="glyphicon glyphicon-search"></span>
 
 </body>
 </html>
