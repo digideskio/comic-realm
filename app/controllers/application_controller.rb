@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 
 	protected
 	def not_authorized
-		redirect_to login_path, :alert => "Login requis."
+		redirect_to root_url, :alert => "Login requis."
 	end
 
 	private
