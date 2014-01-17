@@ -14,4 +14,10 @@ class User < ActiveRecord::Base
 		email.downcase!
 	}
 
+	def self.authenticate(username, password)
+		user = nil
+		user = username.include?('@') ? User.find_by(email: username) : User.find_by(username: username)
+		user.nil? ? false : user.authenticate(password)
+	end
+
 end
