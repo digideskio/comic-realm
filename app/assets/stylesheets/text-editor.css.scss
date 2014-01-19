@@ -1,0 +1,53 @@
+.container.text-editor {
+	width: 100%;
+	text-align: center;
+	background: #f4f4f4;
+	padding: 50px 0px 0px 0px;
+	padding-bottom: 20px;
+}
+
+.text-editor .toolbar {
+	width: 100%;
+	height: 40px;
+	padding: 5px 40px 5px 40px;
+	border-bottom: 1px solid #ccc;
+	position: fixed;
+	top: 50px;
+	background: #efefef;
+	text-align: left;
+	line-height: 25px;
+}
+.text-editor .toolbar icon {
+	vertical-align: middle;
+	width: auto;
+	padding: 6px;
+}
+.text-editor .toolbar icon:hover {
+	background: #f4f4f4;
+	border: 1px outset #ccc;
+	padding: 5px;
+}
+.text-editor .toolbar icon:active {
+	background: #f4f4f4;
+	border: 1px inset #ccc;
+	padding: 5px;
+}
+
+.text-editor .page {
+	font-family: "Courier New", Courier, monospace;
+	margin: 0px auto;
+	width: 816px;
+	height: 1056px;
+	background: #fff;
+	text-align: left;
+	box-shadow: 0 0 0 1px #d1d1d1,0 0 4px 1px #ccc;
+	padding: 50px;
+}
+.text-editor .page textarea {
+	border: 0px;
+	height: 100%;
+	width: 100%;
+}
+.text-editor .page textarea:focus {
+	outline: none;
+}

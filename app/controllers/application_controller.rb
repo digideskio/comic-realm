@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 	# For APIs, you may want to use :null_session instead.
 	protect_from_forgery with: :exception
 	before_action :require_login, :except => [:not_authorized]
+	before_action :set_globals
 
 	def current_user
 		@_current_user ||= session[:current_user_id] && User.find_by(id: session[:current_user_id])
@@ -23,6 +24,10 @@ class ApplicationController < ActionController::Base
 			flash[:error] = "You must be logged in to access this section"
 			not_authorized
 		end
+	end
+
+	def set_globals
+		@logged_in = logged_in?
 	end
 
 end

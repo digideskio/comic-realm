@@ -11,6 +11,9 @@ ComicRealm::Application.routes.draw do
 	get 'logout' => 'sessions#destroy', :as => 'logout'
 	get 'signup' => 'users#new', :as => 'signup'
 
+	# TEST CONTROLLER ROUTES
+	get 'test/text-editor' => 'test#text_editor'
+
 
 	# Example of regular route:
 	#   get 'products/:id' => 'catalog#view'
