@@ -2,7 +2,7 @@
 	width: 100%;
 	text-align: center;
 	background: #f4f4f4;
-	padding: 50px 0px 0px 0px;
+	padding: 60px 0px 20px 0px;
 }
 
 .text-editor .toolbar {
@@ -48,18 +48,26 @@
 	display: inline-block;
 }
 
-.text-editor .page {
+.text-editor .bottom-bar {
+	width: 100%;
+	height: 20px;
+	border-top: 1px solid #ccc;
+	position: fixed;
+	bottom: 0px;
+	background: #f4f4f4;
+}
+
+.text-editor .script {
 	font-family: "Courier New", Courier, monospace;
 	margin: 0 auto;
 	width: 816px;
-	height: 1056px;
+	min-height: 528px;
 	background: #fff;
 	text-align: left;
 	box-shadow: 0 0 0 1px #d1d1d1,0 0 4px 1px #ccc;
 	padding: 100px;
-	overflow: hidden;
 	margin-bottom: 20px;
 }
-.text-editor .page:focus {
+.text-editor .script:focus {
 	outline: none;
 }
