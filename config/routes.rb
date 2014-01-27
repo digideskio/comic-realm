@@ -11,6 +11,11 @@ ComicRealm::Application.routes.draw do
 	post 'login' => 'sessions#create', :as => 'login'
 	get 'logout' => 'sessions#destroy', :as => 'logout'
 	get 'signup' => 'users#new', :as => 'signup'
+	post 'signup' => 'users#create'
+
+	# User Profile Routes
+	get 'profile/:username' => 'users#view'
+	get 'profile/edit' => 'users#edit'
 
 	# TEST CONTROLLER ROUTES
 	get 'test/text-editor' => 'test#text_editor'

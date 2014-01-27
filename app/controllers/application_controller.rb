@@ -28,6 +28,7 @@ class ApplicationController < ActionController::Base
 
 	def set_globals
 		@logged_in = logged_in?
+		@current_user = current_user
 	end
 
 end

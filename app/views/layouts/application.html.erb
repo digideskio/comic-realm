@@ -36,18 +36,26 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 				<% if @logged_in %>
-					<li><a href="/logout">Sign Out</a></li>
-				<% else %>
-					<li><a href="/signup">Sign Up</a></li>
 					<li class="dropdown">
-					<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
-					<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-						<%= form_tag(login_path, method: "post", class: "login-form") do %>
-							<%= text_field_tag :username, nil, placeholder: "Username / Email" %>
-							<%= password_field_tag :password, nil, placeholder: "Password" %>
-							<%= submit_tag "Sign In", class: "login-button btn btn-primary" %>
-						<% end %>
-					</div>
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown"><%= @current_user.username %> <strong class="caret"></strong></a>
+						<ul class="dropdown-menu">
+							<li><%= link_to 'View Profile', @current_user.profile_link %></li>
+							<li><%= link_to 'Edit Account', '/profile/edit' %></li>
+							<li class="divider"></li>
+							<li><a href="/logout">Logout</a></li>
+						</ul>
+					</li>
+				<% else %>
+					<li><%= link_to 'Sign Up', signup_path %></a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+							<%= form_tag(login_path, method: "post", class: "login-form") do %>
+								<%= text_field_tag :username, nil, placeholder: "Username / Email" %>
+								<%= password_field_tag :password, nil, placeholder: "Password" %>
+								<%= submit_tag "Sign In", class: "login-button btn btn-primary" %>
+							<% end %>
+						</div>
 					</li>
 				<% end %>
 				</ul>

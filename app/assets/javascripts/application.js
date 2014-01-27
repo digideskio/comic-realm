@@ -16,4 +16,4 @@
 //= require turbolinks
 //= require bootstrap
 //= require bootstrap-wysiwyg.js
-//= require_tree .
+// require_tree .
