@@ -1,0 +1,18 @@
+User:
+	Many Projects
+
+Projects:
+	Many Notebooks
+	Many ComicBooks
+
+Notebooks:
+	Many Documents
+
+Documents:
+	Content
+
+ComicBooks:
+	Many ComicPages
+
+ComicPages:
+	Content
