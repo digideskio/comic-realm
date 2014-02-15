@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
 	VALID_EMAIL_REGEX    = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
 	VALID_USERNAME_REGEX = /\w+/i
 
-	has_many :projects
+	has_many :projects, :foreign_key => 'owner_id'
+	has_many :notebooks, through: :projects
+	has_many :documents, through: :notebooks
 
 	has_secure_password
 	validates_confirmation_of :password, if: lambda { |m| m.password.present? }
