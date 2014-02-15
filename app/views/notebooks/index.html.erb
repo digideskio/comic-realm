@@ -1,0 +1,31 @@
+<h1>Listing notebooks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @notebooks.each do |notebook| %>
+      <tr>
+        <td><%= notebook.project_id %></td>
+        <td><%= notebook.title %></td>
+        <td><%= notebook.description %></td>
+        <td><%= link_to 'Show', notebook %></td>
+        <td><%= link_to 'Edit', edit_notebook_path(notebook) %></td>
+        <td><%= link_to 'Destroy', notebook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Notebook', new_notebook_path %>
