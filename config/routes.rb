@@ -21,6 +21,9 @@ ComicRealm::Application.routes.draw do
 	get 'profile/:username' => 'users#view'
 	get 'profile/edit' => 'users#edit'
 
+	# Home Project Handeling Paths
+	get 'home' => 'home#home', :as => 'home'
+
 	# TEST CONTROLLER ROUTES
 	get 'test/text-editor' => 'test#text_editor'
 

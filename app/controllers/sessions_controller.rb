@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 	def create
 		if user = User.authenticate(params[:username], params[:password])
 			session[:current_user_id] = user.id
-			redirect_to root_url , :notice => "Logged in!"
+			redirect_to home_url , :notice => "Logged in!"
 		else
 			redirect_to root_url, :alert => "Email or password was invalid."
 		end

@@ -35,6 +35,14 @@ body {
 	padding-left: 20px;
 	padding-right: 20px;
 }
+.navbar.main {
+	min-height: 25px;
+	height: 30px;
+}
+.navbar.main .navbar-brand, .navbar.main .dropdown-toggle {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
 
 .login-form input {
 	border-radius: 5px;
