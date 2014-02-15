@@ -1,4 +1,6 @@
 ComicRealm::Application.routes.draw do
+  resources :documents
+
   resources :notebooks
 
 	resources :projects
